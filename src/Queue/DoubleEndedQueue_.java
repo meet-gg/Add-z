@@ -1,5 +1,4 @@
 package Queue;//package Queue;
-//
 //public class DoubleEndedQueue_ {
 //    static int[] queue=new int[5];
 //    static int f=-1,r=-1;
