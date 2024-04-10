@@ -54,7 +54,7 @@ public class basic {
 //        ll.loop();
 //        ll.looplength();
         ll.check();
-        ll.looplength();
+//        ll.looplength();
     }
 }
 class Linklist{
@@ -193,18 +193,18 @@ class Linklist{
     public void looplength(){  //Loop ma total ketala nodes include che te count karva mate
         Node slow = head;
         Node fast = head;
-        int count=0;
-        while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow == fast) {
+        int cnt=0;
+        while (fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+            if (slow==fast){
                 slow=slow.next;
-                count++;
-                while (slow!=fast) {
-                    slow = slow.next;
-                    count++;
+                cnt++;
+                while (slow!=fast){
+                    slow=slow.next;
+                    cnt++;
                 }
-                System.out.println(count);
+                System.out.println(cnt);
                 return;
             }
         }
@@ -259,7 +259,6 @@ class Linklist{
                 break;
         }
         }
-        //
         if (cycle==false){
             return;
         }
@@ -272,7 +271,7 @@ class Linklist{
     }
 
     public void link() {
-        tail.next=head.next;
+        tail.next=head.next.next;
     }
 
     public int lastget(int position) {
